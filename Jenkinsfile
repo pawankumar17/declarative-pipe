@@ -29,29 +29,11 @@ pipeline {
         }
     } 
     stage('SonarQube'){
-
- 
-
         steps{
-
- 
-
-            bat label: '', script: '''mvn sonar:sonar \
-
- 
-
-            -Dsonar.host.url=http://localhost:9000 \
-
- 
-
+            bat label: '', script: '''mvn sonar:sonar\
+            -Dsonar.host.url=http://localhost:9000\
             -Dsonar.login=squ_7cc73e671d6afe91619b833428088465df78f2a2'''
-
- 
-
             }
-
- 
-
    } 
   }
   post {
