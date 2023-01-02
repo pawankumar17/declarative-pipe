@@ -6,7 +6,7 @@ pipeline {
 				echo 'Project compile stage'
 				bat label: 'Compilation running', script: '''mvn compile'''
       }
-}
+   }
 
         stage('Unit Test') {
  			steps {
@@ -35,7 +35,7 @@ pipeline {
 			-Dsonar.login=squ_7cc73e671d6afe91619b833428088465df78f2a2'''
 			} 
   		}
-} 
+    } 
 	 post {
        	always {
            cucumber '**/cucumber.json'
