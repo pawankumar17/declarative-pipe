@@ -27,10 +27,11 @@ pipeline {
 				bat label: 'Project packaging', script: '''mvn package'''
 		}	
 	}
-	    post {
+	  
+  }
+    post {
         	always {
             	cucumber '**/cucumber.json'
           }
     }
-  }
 }
